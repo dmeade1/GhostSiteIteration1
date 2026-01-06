@@ -119,6 +119,7 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    background: #000000;
 }
 
 .hero-bg::after {
@@ -140,6 +141,12 @@ body {
     height: 100%;
     object-fit: cover;
     pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#hero-video.playing {
+    opacity: 1;
 }
 
 #hero-video::-webkit-media-controls {
@@ -155,6 +162,10 @@ body {
 }
 
 #hero-video::-webkit-media-controls-play-button {
+    display: none !important;
+}
+
+#hero-video::-webkit-media-controls-start-playback-button {
     display: none !important;
 }
 
