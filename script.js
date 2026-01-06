@@ -26,24 +26,34 @@ window.addEventListener('scroll', () => {
 });
 
 // Astondoa banner hide on scroll past hero
-const astondoaBanner = document.getElementById('astondoa-banner');
+// Astondoa banner hide on scroll past hero using IntersectionObserver
+document.addEventListener('DOMContentLoaded', () => {
+    const astondoaBanner = document.getElementById('astondoa-banner');
+    const hero = document.querySelector('.hero');
 
-window.addEventListener('scroll', () => {
-    if (astondoaBanner) {
-        const scrollPosition = window.pageYOffset;
-        // Use viewport height as a reliable proxy for "hero section"
-        // Hide when scrolled past 70% of the screen height
-        const triggerPoint = window.innerHeight * 0.7;
+    if (astondoaBanner && hero) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                // If hero is NOT intersecting (out of view), hide banner
+                // If hero IS intersecting (in view), show banner
+                if (!entry.isIntersecting) {
+                    astondoaBanner.style.opacity = '0';
+                    astondoaBanner.style.transform = 'translateY(-200%)';
+                    astondoaBanner.style.pointerEvents = 'none';
+                } else {
+                    astondoaBanner.style.opacity = '1';
+                    astondoaBanner.style.transform = 'translateY(0)';
+                    astondoaBanner.style.pointerEvents = 'auto';
+                }
+            });
+        }, {
+            // Trigger when even 1 pixel of the hero is visible?
+            // Actually we want to detect when it LEAVES.
+            // threshold 0 means the callback is run when visibility crosses 0% (enters or leaves completely)
+            threshold: 0
+        });
 
-        if (scrollPosition > triggerPoint) {
-            astondoaBanner.style.opacity = '0';
-            astondoaBanner.style.transform = 'translateY(-200%)';
-            astondoaBanner.style.pointerEvents = 'none';
-        } else {
-            astondoaBanner.style.opacity = '1';
-            astondoaBanner.style.transform = 'translateY(0)';
-            astondoaBanner.style.pointerEvents = 'auto';
-        }
+        observer.observe(hero);
     }
 });
 
