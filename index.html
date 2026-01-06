@@ -561,6 +561,27 @@
         🏆 EXCLUSIVE SOURCE FOR ASTONDOA YACHTS IN NORTH AMERICA
     </div>
 
+    <script>
+        // Inline banner scroll logic to avoid caching issues
+        (function () {
+            const banner = document.getElementById('astondoa-banner');
+            if (banner) {
+                window.addEventListener('scroll', function () {
+                    const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+                    if (scrollPos > 600) {
+                        banner.style.opacity = '0';
+                        banner.style.transform = 'translateY(-200%)';
+                        banner.style.pointerEvents = 'none';
+                    } else {
+                        banner.style.opacity = '1';
+                        banner.style.transform = 'translateY(0)';
+                        banner.style.pointerEvents = 'auto';
+                    }
+                });
+            }
+        })();
+    </script>
+
     <!-- Hero -->
     <section class="hero">
         <div class="hero-bg"></div>
