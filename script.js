@@ -25,6 +25,27 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
+// Astondoa banner hide on scroll past hero
+const astondoaBanner = document.getElementById('astondoa-banner');
+const heroSection = document.querySelector('.hero');
+
+window.addEventListener('scroll', () => {
+    if (heroSection && astondoaBanner) {
+        const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+        const scrollPosition = window.pageYOffset;
+
+        if (scrollPosition > heroBottom - 200) {
+            astondoaBanner.style.opacity = '0';
+            astondoaBanner.style.transform = 'translateY(-100%)';
+            astondoaBanner.style.pointerEvents = 'none';
+        } else {
+            astondoaBanner.style.opacity = '1';
+            astondoaBanner.style.transform = 'translateY(0)';
+            astondoaBanner.style.pointerEvents = 'auto';
+        }
+    }
+});
+
 // Testimonial Carousel
 let currentSlide = 0;
 
