@@ -32,10 +32,10 @@ window.addEventListener('scroll', () => {
     if (astondoaBanner) {
         const scrollPosition = window.pageYOffset;
 
-        // Hide banner when scrolled past 800px (approximately past hero content)
-        if (scrollPosition > 800) {
+        // Hide banner when scrolled past 150px (promptly after hero)
+        if (scrollPosition > 150) {
             astondoaBanner.style.opacity = '0';
-            astondoaBanner.style.transform = 'translateY(-100%)';
+            astondoaBanner.style.transform = 'translateY(-200%)';
             astondoaBanner.style.pointerEvents = 'none';
         } else {
             astondoaBanner.style.opacity = '1';
