@@ -590,11 +590,17 @@
             </video>
         </div>
         <script>
-            // Force video to play without controls
+            // Force video to play without controls and hide during buffering
             document.addEventListener('DOMContentLoaded', function () {
                 const video = document.getElementById('hero-video');
                 if (video) {
                     video.removeAttribute('controls');
+
+                    // Add playing class when video actually starts playing
+                    video.addEventListener('playing', function () {
+                        video.classList.add('playing');
+                    });
+
                     video.play().catch(e => console.log('Autoplay prevented:', e));
                 }
             });
