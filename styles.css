@@ -142,7 +142,8 @@ body {
     color: var(--white);
     max-width: 1000px;
     padding: 2rem;
-    padding-bottom: 8rem;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
 }
 
 .hero-label {
