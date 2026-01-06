@@ -29,15 +29,13 @@ window.addEventListener('scroll', () => {
 const astondoaBanner = document.getElementById('astondoa-banner');
 
 window.addEventListener('scroll', () => {
-    const hero = document.querySelector('.hero');
-
-    if (astondoaBanner && hero) {
+    if (astondoaBanner) {
         const scrollPosition = window.pageYOffset;
-        const heroBottom = hero.offsetTop + hero.offsetHeight;
+        // Use viewport height as a reliable proxy for "hero section"
+        // Hide when scrolled past 70% of the screen height
+        const triggerPoint = window.innerHeight * 0.7;
 
-        // Hide banner only when scrolling past the hero section (minus a small buffer)
-        // This ensures it stays visible while viewing the hero content
-        if (scrollPosition > (heroBottom - 100)) {
+        if (scrollPosition > triggerPoint) {
             astondoaBanner.style.opacity = '0';
             astondoaBanner.style.transform = 'translateY(-200%)';
             astondoaBanner.style.pointerEvents = 'none';
