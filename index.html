@@ -585,10 +585,20 @@
     <!-- Hero -->
     <section class="hero">
         <div class="hero-bg">
-            <video autoplay muted loop playsinline id="hero-video">
+            <video autoplay muted loop playsinline controls="false" id="hero-video">
                 <source src="images/hero-video.mov" type="video/mp4">
             </video>
         </div>
+        <script>
+            // Force video to play without controls
+            document.addEventListener('DOMContentLoaded', function () {
+                const video = document.getElementById('hero-video');
+                if (video) {
+                    video.removeAttribute('controls');
+                    video.play().catch(e => console.log('Autoplay prevented:', e));
+                }
+            });
+        </script>
         <div class="hero-content">
             <div class="hero-label">Yacht Sales | New Builds | Yacht Management</div>
             <h1 class="hero-title">The Art of Yachting Perfected</h1>
