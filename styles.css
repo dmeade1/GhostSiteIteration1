@@ -393,14 +393,14 @@ body {
     cursor: pointer;
     transition: all 0.5s ease;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)),
-        url('../images/yacht-service.jpg?v=2');
+        url('../images/yacht-service.jpg?v=3');
     background-size: cover;
     background-position: center;
 }
 
 .service-item:hover {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.75)),
-        url('../images/yacht-service.jpg?v=2');
+        url('../images/yacht-service.jpg?v=3');
     background-size: cover;
     background-position: center;
 }
