@@ -415,10 +415,25 @@ body {
 }
 
 .service-item:hover {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.85)),
-        url('../images/yacht-service.jpg');
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.75)),
+        url('../images/yacht-service.jpg?v=2');
+    background-size: 400% 100%;
+}
+
+.service-item:nth-child(1):hover {
+    background-position: 0% center;
+}
+
+.service-item:nth-child(2):hover {
+    background-position: 33.33% center;
+}
+
+.service-item:nth-child(3):hover {
+    background-position: 66.66% center;
+}
+
+.service-item:nth-child(4):hover {
+    background-position: 100% center;
 }
 
 .service-content {
