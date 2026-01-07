@@ -391,18 +391,33 @@ body {
     height: 600px;
     overflow: hidden;
     cursor: pointer;
-    transition: all 0.5s ease;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)),
         url('../images/yacht-service.jpg?v=3');
     background-size: cover;
     background-position: center;
 }
 
+.service-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    z-index: 1;
+}
+
+.service-item:hover::before {
+    opacity: 1;
+}
+
 .service-item:hover {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.75)),
-        url('../images/yacht-service.jpg?v=3');
-    background-size: cover;
-    background-position: center;
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .service-content {
@@ -440,12 +455,14 @@ body {
     opacity: 0;
     max-height: 0;
     overflow: hidden;
-    transition: opacity 0.3s ease, max-height 0.3s ease;
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(-10px);
 }
 
 .service-item:hover .service-desc {
     opacity: 1;
     max-height: 200px;
+    transform: translateY(0);
 }
 
 .service-link {
