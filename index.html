@@ -585,16 +585,24 @@
     <!-- Hero -->
     <section class="hero">
         <div class="hero-bg">
-            <video autoplay muted loop playsinline preload="auto" poster="images/hero-poster.jpg" id="hero-video">
+            <div id="video-cover"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('images/hero-poster.jpg') center/cover no-repeat; z-index: 2; transition: opacity 0.5s ease;">
+            </div>
+            <video autoplay muted loop playsinline preload="auto" id="hero-video">
                 <source src="images/hero-video.mp4" type="video/mp4">
             </video>
         </div>
         <script>
-            // Force video to play without controls
+            // Hide video cover once video starts playing
             document.addEventListener('DOMContentLoaded', function () {
                 const video = document.getElementById('hero-video');
-                if (video) {
+                const cover = document.getElementById('video-cover');
+                if (video && cover) {
                     video.removeAttribute('controls');
+                    video.addEventListener('playing', function () {
+                        cover.style.opacity = '0';
+                        cover.style.pointerEvents = 'none';
+                    });
                     video.play().catch(e => console.log('Autoplay prevented:', e));
                 }
             });
