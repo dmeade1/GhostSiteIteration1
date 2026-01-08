@@ -393,9 +393,25 @@ body {
     cursor: pointer;
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)),
-        url('../images/yacht-service.jpg?v=3');
-    background-size: cover;
+        url('../images/yacht-service.jpg?v=4');
+    background-size: 400% 100%;
     background-position: center;
+}
+
+.service-item:nth-child(1) {
+    background-position: 0% center;
+}
+
+.service-item:nth-child(2) {
+    background-position: 33.33% center;
+}
+
+.service-item:nth-child(3) {
+    background-position: 66.66% center;
+}
+
+.service-item:nth-child(4) {
+    background-position: 100% center;
 }
 
 .service-item::before {
