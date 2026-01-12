@@ -367,7 +367,7 @@ video::-webkit-media-controls-overlay-enclosure {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.02;
+    opacity: 0.01;
     pointer-events: none;
     z-index: 0;
 }
