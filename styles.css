@@ -975,24 +975,27 @@ video::-webkit-media-controls-overlay-enclosure {
     }
 
     /* Adjust service card backgrounds for 2-column layout */
+    /* Cards 1-2 show one continuous image, Cards 3-4 show another */
     .service-item {
         background-size: 200% auto;
     }
 
+    /* First row - left and right halves of first image */
     .service-item:nth-child(1) {
-        background-position: 0% center;
+        background-position: left center;
     }
 
     .service-item:nth-child(2) {
-        background-position: 100% center;
+        background-position: right center;
     }
 
+    /* Second row - left and right halves of second image */
     .service-item:nth-child(3) {
-        background-position: 0% center;
+        background-position: left center;
     }
 
     .service-item:nth-child(4) {
-        background-position: 100% center;
+        background-position: right center;
     }
 }
 
