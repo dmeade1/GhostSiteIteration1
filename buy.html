@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yachts for Sale - Ghost Yachts | Miami Beach Yacht Brokerage</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Browse our exclusive collection of luxury yachts for sale. Ghost Yachts offers premium yacht brokerage services in Miami Beach with access to the finest vessels worldwide.">
+    <meta name="keywords"
+        content="yachts for sale, luxury yachts, Miami yacht broker, Astondoa yachts, yacht brokerage">
+
+    <!-- IYBA Widget Styles -->
+    <style>
+        .buy-hero {
+            position: relative;
+            height: 60vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--midnight) 0%, var(--ocean) 100%);
+            margin-top: 6.25rem;
+            overflow: hidden;
+        }
+
+        .buy-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('images/yacht-service.jpg') center/cover no-repeat;
+            opacity: 0.2;
+            z-index: 0;
+        }
+
+        .buy-hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            color: var(--white);
+            max-width: 900px;
+            padding: 2rem;
+        }
+
+        .listings-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            min-height: 600px;
+        }
+
+        /* IYBA Widget Container */
+        #iyba-listings-widget {
+            width: 100%;
+            min-height: 800px;
+        }
+
+        .loading-message {
+            text-align: center;
+            padding: 4rem 2rem;
+            font-size: 1.125rem;
+            color: var(--grey);
+        }
+
+        .error-message {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 8px;
+            margin: 2rem;
+            color: #856404;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/ghost-yachts-logo-transparent.png" alt="Ghost Yachts">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="buy.html" class="active">Buy</a></li>
+                <li><a href="index.html#sell">Sell</a></li>
+                <li><a href="management.html">Management</a></li>
+                <li><a href="index.html#astondoa">Astondoa</a></li>
+                <li><a href="index.html#team">Team</a></li>
+                <li><a href="index.html#news">News</a></li>
+            </ul>
+            <a href="index.html#contact" class="btn-contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Buy Hero -->
+    <section class="buy-hero">
+        <div class="buy-hero-content">
+            <div class="hero-label">AVAILABLE NOW</div>
+            <h1 class="hero-title" style="font-size: 4rem;">Yachts for Sale</h1>
+            <p class="hero-subtitle">Explore our curated collection of the world's finest luxury yachts. From sleek
+                performance vessels to opulent superyachts, find your perfect match with Ghost Yachts.</p>
+        </div>
+    </section>
+
+    <!-- Listings Container -->
+    <section class="listings-container">
+        <div id="iyba-listings-widget">
+            <div class="loading-message">
+                <p>Loading available yachts...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- IYBA Integration Script -->
+    <script>
+        // Load IYBA configuration from external file (not committed to git)
+        // This keeps API keys and sensitive data separate
+        const loadIYBAWidget = async () => {
+            try {
+                // Check if config file exists
+                const response = await fetch('config.js');
+                if (!response.ok) {
+                    throw new Error('Configuration file not found');
+                }
+
+                // Load the configuration
+                const configScript = document.createElement('script');
+                configScript.src = 'config.js';
+                configScript.onload = () => {
+                    initializeIYBAWidget();
+                };
+                configScript.onerror = () => {
+                    showConfigurationError();
+                };
+                document.head.appendChild(configScript);
+
+            } catch (error) {
+                console.error('Error loading IYBA configuration:', error);
+                showConfigurationError();
+            }
+        };
+
+        const initializeIYBAWidget = () => {
+            // This function will be called after config.js loads
+            // config.js should define window.IYBA_CONFIG with necessary parameters
+
+            if (!window.IYBA_CONFIG) {
+                showConfigurationError();
+                return;
+            }
+
+            // Load IYBA widget script
+            const iybaScript = document.createElement('script');
+            iybaScript.src = window.IYBA_CONFIG.scriptUrl || 'https://www.iyba.org/wp-content/plugins/iyba-listings/js/iyba-listings.js';
+            iybaScript.onload = () => {
+                renderIYBAListings();
+            };
+            iybaScript.onerror = () => {
+                showWidgetError();
+            };
+            document.head.appendChild(iybaScript);
+        };
+
+        const renderIYBAListings = () => {
+            const container = document.getElementById('iyba-listings-widget');
+
+            // Clear loading message
+            container.innerHTML = '';
+
+            // Create the IYBA widget element
+            // Based on the shortcode parameters provided
+            const widgetConfig = {
+                status: 'On,Under Contract',
+                sort: 'length,1',
+                priority_brokerage: '40000283',
+                default_listing_view: 'grid',
+                search_box: 'show',
+                search_title: 'show',
+                static: 'no',
+                url: 'no',
+                result_message: 'show',
+                save_search: 'hide',
+                follow: 'hide'
+            };
+
+            // Initialize IYBA widget with configuration
+            if (window.IYBAListings && typeof window.IYBAListings.init === 'function') {
+                window.IYBAListings.init(container, widgetConfig);
+            } else {
+                // Fallback: Create iframe or direct embed
+                createIYBAEmbed(container, widgetConfig);
+            }
+        };
+
+        const createIYBAEmbed = (container, config) => {
+            // Alternative implementation if direct widget isn't available
+            // This creates an iframe or direct HTML embed
+            const embedDiv = document.createElement('div');
+            embedDiv.className = 'iyba-listings-embed';
+            embedDiv.setAttribute('data-status', config.status);
+            embedDiv.setAttribute('data-sort', config.sort);
+            embedDiv.setAttribute('data-priority-brokerage', config.priority_brokerage);
+            embedDiv.setAttribute('data-view', config.default_listing_view);
+
+            container.appendChild(embedDiv);
+
+            // Add note about configuration
+            const note = document.createElement('div');
+            note.className = 'error-message';
+            note.innerHTML = `
+                <h3>IYBA Widget Configuration Required</h3>
+                <p>To display yacht listings, please create a <code>config.js</code> file with your IYBA API credentials.</p>
+                <p>Contact your IYBA representative for API access details.</p>
+                <p><strong>Note:</strong> The config.js file is excluded from git to protect your API credentials.</p>
+            `;
+            container.appendChild(note);
+        };
+
+        const showConfigurationError = () => {
+            const container = document.getElementById('iyba-listings-widget');
+            container.innerHTML = `
+                <div class="error-message">
+                    <h3>Configuration Required</h3>
+                    <p>To display IYBA yacht listings, please create a <code>config.js</code> file in the root directory.</p>
+                    <p>Example configuration:</p>
+                    <pre style="background: #f5f5f5; padding: 1rem; border-radius: 4px; text-align: left; max-width: 600px; margin: 1rem auto; overflow-x: auto;">
+// config.js
+window.IYBA_CONFIG = {
+    scriptUrl: 'https://www.iyba.org/path/to/widget.js',
+    apiKey: 'YOUR_API_KEY_HERE',
+    brokerId: '40000283'
+};
+                    </pre>
+                    <p><strong>Important:</strong> This file is automatically excluded from git commits to protect your credentials.</p>
+                </div>
+            `;
+        };
+
+        const showWidgetError = () => {
+            const container = document.getElementById('iyba-listings-widget');
+            container.innerHTML = `
+                <div class="error-message">
+                    <h3>Widget Loading Error</h3>
+                    <p>Unable to load the IYBA listings widget. Please check your configuration and try again.</p>
+                    <p>If the problem persists, contact IYBA support.</p>
+                </div>
+            `;
+        };
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', loadIYBAWidget);
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="images/ghost-yachts-logo-footer.png" alt="Ghost Yachts"
+                    style="height: 60px; margin-bottom: 1.5rem;">
+                <p>Miami Beach's premier boutique yacht brokerage specializing in luxury yacht sales, management, and
+                    custom builds.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="buy.html">Buy a Yacht</a></li>
+                    <li><a href="index.html#sell">Sell a Yacht</a></li>
+                    <li><a href="management.html">Yacht Management</a></li>
+                    <li><a href="index.html#astondoa">Astondoa Yachts</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="index.html#team">Our Team</a></li>
+                    <li><a href="index.html#news">News</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>300 Alton Road Suite 112<br>Miami Beach, FL 33139</p>
+                <p>Phone: <a href="tel:+13057638386">+1 (305) 763-8386</a></p>
+                <p>Email: <a href="mailto:info@ghostyachtsales.com">info@ghostyachtsales.com</a></p>
+            </div>
+        </div>
+        <div
+            style="max-width: 1600px; margin: 0 auto; padding: 2rem 4rem 0; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+            <p style="opacity: 0.6; font-size: 0.875rem;">&copy; 2026 Ghost Yacht Sales. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

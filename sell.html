@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your Yacht - Ghost Yachts | Maximizing Your Yacht's Sell Price</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Maximize your yacht's selling price with Ghost Yachts. Expert yacht brokerage services in Miami Beach with professional marketing, negotiation expertise, and exceptional service.">
+    <meta name="keywords" content="sell yacht, yacht broker, Miami yacht sales, yacht brokerage, sell my yacht">
+
+    <style>
+        .sell-hero {
+            position: relative;
+            height: 60vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--midnight) 0%, var(--ocean) 100%);
+            margin-top: 6.25rem;
+            overflow: hidden;
+        }
+
+        .sell-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('images/yacht-service.jpg') center/cover no-repeat;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .sell-hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            color: var(--white);
+            max-width: 900px;
+            padding: 2rem;
+        }
+
+        .sell-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+        }
+
+        .intro-section {
+            text-align: center;
+            margin-bottom: 6rem;
+        }
+
+        .intro-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--midnight);
+            margin-bottom: 2rem;
+        }
+
+        .intro-section p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--grey);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .how-we-help {
+            background: var(--cream);
+            padding: 6rem 2rem;
+            margin: 0 -2rem;
+        }
+
+        .how-we-help-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .how-we-help h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--midnight);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .how-we-help>p {
+            text-align: center;
+            font-size: 1.125rem;
+            color: var(--grey);
+            margin-bottom: 4rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .help-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .help-item {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .help-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .help-item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            color: var(--midnight);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .help-item-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--gold);
+            color: var(--white);
+            border-radius: 50%;
+            font-size: 1rem;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        .help-item p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--grey);
+        }
+
+        .contact-section {
+            max-width: 800px;
+            margin: 6rem auto 0;
+            padding: 0 2rem;
+        }
+
+        .contact-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--midnight);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-section>p {
+            text-align: center;
+            font-size: 1.125rem;
+            color: var(--grey);
+            margin-bottom: 3rem;
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            color: var(--midnight);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .form-group label .required {
+            color: var(--gold);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.25rem 3rem;
+            background: var(--midnight);
+            color: var(--white);
+            font-size: 1rem;
+            font-weight: 500;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .submit-btn:hover {
+            background: var(--gold);
+        }
+
+        .form-message {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 4px;
+            text-align: center;
+            display: none;
+        }
+
+        .form-message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .form-message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/ghost-yachts-logo-transparent.png" alt="Ghost Yachts">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="sell.html" class="active">Sell</a></li>
+                <li><a href="management.html">Management</a></li>
+                <li><a href="index.html#astondoa">Astondoa</a></li>
+                <li><a href="index.html#team">Team</a></li>
+                <li><a href="index.html#news">News</a></li>
+            </ul>
+            <a href="#contact-form" class="btn-contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Sell Hero -->
+    <section class="sell-hero">
+        <div class="sell-hero-content">
+            <div class="hero-label">EXPERT YACHT BROKERAGE</div>
+            <h1 class="hero-title" style="font-size: 4rem;">Maximizing Your Yacht's Sell Price</h1>
+            <p class="hero-subtitle">Ghost Yachts is a premier yacht brokerage company specializing in maximizing the
+                selling price of luxury yachts. With years of experience and a dedicated team of professionals, we offer
+                unparalleled service and expertise in the yacht sales industry.</p>
+        </div>
+    </section>
+
+    <!-- How We Help Section -->
+    <section class="how-we-help">
+        <div class="how-we-help-content">
+            <div class="section-label" style="text-align: center; margin-bottom: 1rem;">OUR APPROACH</div>
+            <h2>How Do We Help?</h2>
+            <p>At Ghost Yachts, we understand that selling your yacht is a significant decision, and we are committed to
+                helping you achieve the highest possible selling price. Here's how we do it:</p>
+
+            <div class="help-items">
+                <div class="help-item">
+                    <h3><span class="help-item-number">01</span> Market Analysis</h3>
+                    <p>We conduct comprehensive market analysis to determine the optimal selling price for your yacht,
+                        considering factors such as market trends, comparable sales, and the condition of your vessel.
+                    </p>
+                </div>
+
+                <div class="help-item">
+                    <h3><span class="help-item-number">02</span> Professional Listing</h3>
+                    <p>We create professional listings that highlight the unique features and selling points of your
+                        yacht, attracting qualified buyers and maximizing exposure.</p>
+                </div>
+
+                <div class="help-item">
+                    <h3><span class="help-item-number">03</span> Targeted Marketing</h3>
+                    <p>Through our extensive network and strategic marketing efforts, we target potential buyers who are
+                        actively seeking yachts similar to yours, increasing the likelihood of a successful sale at a
+                        premium price.</p>
+                </div>
+
+                <div class="help-item">
+                    <h3><span class="help-item-number">04</span> Negotiation Expertise</h3>
+                    <p>Our experienced brokers are skilled negotiators who work tirelessly to secure the best possible
+                        deal for our clients, ensuring that you receive maximum value for your yacht.</p>
+                </div>
+
+                <div class="help-item">
+                    <h3><span class="help-item-number">05</span> Exceptional Service</h3>
+                    <p>From the initial consultation to the closing of the sale, we provide personalized service and
+                        support every step of the way, making the selling process seamless and stress-free.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact-form">
+        <h2>Contact Us</h2>
+        <p>Ready to maximize the selling price of your yacht? Contact Ghost Yachts today to speak with one of our
+            experienced brokers and learn how we can help you achieve your goals.</p>
+
+        <form class="contact-form" id="sellContactForm">
+            <div class="form-group">
+                <label for="name">Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telephone">Telephone</label>
+                <input type="tel" id="telephone" name="telephone">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message <span class="required">*</span></label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+
+            <div class="form-message" id="formMessage"></div>
+        </form>
+    </section>
+
+    <!-- Spacer -->
+    <div style="height: 6rem;"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="images/ghost-yachts-logo-footer.png" alt="Ghost Yachts"
+                    style="height: 60px; margin-bottom: 1.5rem;">
+                <p>Miami Beach's premier boutique yacht brokerage specializing in luxury yacht sales, management, and
+                    custom builds.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="buy.html">Buy a Yacht</a></li>
+                    <li><a href="sell.html">Sell a Yacht</a></li>
+                    <li><a href="management.html">Yacht Management</a></li>
+                    <li><a href="index.html#astondoa">Astondoa Yachts</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="index.html#team">Our Team</a></li>
+                    <li><a href="index.html#news">News</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>300 Alton Road Suite 112<br>Miami Beach, FL 33139</p>
+                <p>Phone: <a href="tel:+13057638386">+1 (305) 763-8386</a></p>
+                <p>Email: <a href="mailto:info@ghostyachtsales.com">info@ghostyachtsales.com</a></p>
+            </div>
+        </div>
+        <div
+            style="max-width: 1600px; margin: 0 auto; padding: 2rem 4rem 0; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+            <p style="opacity: 0.6; font-size: 0.875rem;">&copy; 2026 Ghost Yacht Sales. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Form submission handler
+        document.getElementById('sellContactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const formMessage = document.getElementById('formMessage');
+            const submitBtn = this.querySelector('.submit-btn');
+
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                telephone: document.getElementById('telephone').value,
+                message: document.getElementById('message').value
+            };
+
+            // Disable submit button
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+
+            // Simulate form submission (replace with actual API call)
+            setTimeout(() => {
+                // Show success message
+                formMessage.className = 'form-message success';
+                formMessage.textContent = 'Thank you for your message! We will contact you shortly.';
+                formMessage.style.display = 'block';
+
+                // Reset form
+                this.reset();
+
+                // Re-enable submit button
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    formMessage.style.display = 'none';
+                }, 5000);
+            }, 1000);
+
+            // In production, replace the above with actual form submission:
+            /*
+            fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                formMessage.className = 'form-message success';
+                formMessage.textContent = 'Thank you for your message! We will contact you shortly.';
+                formMessage.style.display = 'block';
+                this.reset();
+            })
+            .catch(error => {
+                formMessage.className = 'form-message error';
+                formMessage.textContent = 'Sorry, there was an error sending your message. Please try again.';
+                formMessage.style.display = 'block';
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+            });
+            */
+        });
+    </script>
+</body>
+
+</html>

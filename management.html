@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yacht Management Services - Ghost Yachts | Miami Beach</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Concierge-level yacht management services in Miami Beach. Ghost Yachts provides comprehensive maintenance, financial management, charter services, and more for discerning yacht owners.">
+    <meta name="keywords"
+        content="yacht management, yacht maintenance, charter management, Miami yacht services, concierge yacht care">
+
+    <style>
+        .management-hero {
+            position: relative;
+            height: 60vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--midnight) 0%, var(--ocean) 100%);
+            margin-top: 6.25rem;
+            overflow: hidden;
+        }
+
+        .management-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('images/yacht-service.jpg') center/cover no-repeat;
+            opacity: 0.2;
+            z-index: 0;
+        }
+
+        .management-hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            color: var(--white);
+            max-width: 900px;
+            padding: 2rem;
+        }
+
+        .management-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 6rem 4rem;
+        }
+
+        .management-intro {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 5rem;
+        }
+
+        .management-intro h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: var(--midnight);
+            margin-bottom: 1.5rem;
+        }
+
+        .management-intro p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--grey);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/ghost-yachts-logo-transparent.png" alt="Ghost Yachts">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="sell.html">Sell</a></li>
+                <li><a href="management.html" class="active">Management</a></li>
+                <li><a href="index.html#astondoa">Astondoa</a></li>
+                <li><a href="index.html#team">Team</a></li>
+                <li><a href="index.html#news">News</a></li>
+            </ul>
+            <a href="index.html#contact" class="btn-contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Management Hero -->
+    <section class="management-hero">
+        <div class="management-hero-content">
+            <div class="hero-label">YACHT MANAGEMENT</div>
+            <h1 class="hero-title" style="font-size: 4rem;">Concierge Level Yacht Management Services</h1>
+            <p class="hero-subtitle">Discover unparalleled concierge-level yacht management services for discerning
+                yacht owners at Ghost Yachts. Our dedicated team is committed to providing top-notch expertise,
+                ensuring your yacht is maintained to the highest standards while exceeding your expectations.</p>
+        </div>
+    </section>
+
+    <!-- Management Services -->
+    <section class="management-content">
+        <div class="management-grid">
+            <div class="management-card">
+                <div class="management-icon">🔧</div>
+                <h3 class="management-title">Maintenance and Repairs</h3>
+                <p class="management-desc">Leave the upkeep of your yacht to our experienced management team, available
+                    7 days a week. From routine maintenance and cleanings, to intricate repairs, our team is at your
+                    service so that your yacht remains in impeccable condition.</p>
+            </div>
+
+            <div class="management-card">
+                <div class="management-icon">💼</div>
+                <h3 class="management-title">Financial Management</h3>
+                <p class="management-desc">Effortlessly manage the financial aspects of your yacht with our transparent
+                    accounting and budgeting services. Our financial management reports keep you informed about the
+                    financial health of your yacht.</p>
+            </div>
+
+            <div class="management-card">
+                <div class="management-icon">✨</div>
+                <h3 class="management-title">Interior Staging and Design</h3>
+                <p class="management-desc">Our interior staging and design services elevate each vessel into a
+                    masterpiece of luxury. With meticulous attention to detail, we curate sophisticated interiors that
+                    combine elegance, comfort, and functionality.</p>
+            </div>
+
+            <div class="management-card">
+                <div class="management-icon">🎯</div>
+                <h3 class="management-title">Custom Services</h3>
+                <p class="management-desc">Our team continuously adapts our services to your unique needs- from
+                    personalized experiences to celebrating a special event. As we continuously collaborate, just let
+                    us know, and Ghost Yachts will make it happen!</p>
+            </div>
+
+            <div class="management-card">
+                <div class="management-icon">⚓</div>
+                <h3 class="management-title">Charter Management</h3>
+                <p class="management-desc">Unlock the potential revenue of your yacht with our comprehensive charter
+                    management services. We handle all aspects, including bookings and detailed itinerary planning,
+                    ensuring your yacht is in high demand throughout the year.</p>
+            </div>
+
+            <div class="management-card">
+                <div class="management-icon">🌟</div>
+                <h3 class="management-title">Concierge Level Care</h3>
+                <p class="management-desc">Experience concierge level support with our team that can handle all of your
+                    yachting needs. From ensuring your laundry is done with care, to helping you plan your perfect
+                    event- we ensure every detail is seamlessly coordinated.</p>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div style="text-align: center; margin-top: 5rem;">
+            <h2
+                style="font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 400; color: var(--midnight); margin-bottom: 1.5rem;">
+                Ready to Experience Concierge-Level Care?</h2>
+            <p
+                style="font-size: 1.125rem; color: var(--grey); margin-bottom: 2.5rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Let our expert team handle every aspect of your yacht's management so you can focus on enjoying your
+                time on the water.</p>
+            <div class="hero-buttons">
+                <a href="index.html#contact" class="btn-primary"
+                    style="background: var(--midnight); color: var(--white); border-color: var(--midnight);">Get
+                    Started</a>
+                <a href="tel:+13057638386" class="btn-secondary"
+                    style="color: var(--midnight); border-color: var(--midnight);">Call Us Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="images/ghost-yachts-logo-footer.png" alt="Ghost Yachts"
+                    style="height: 60px; margin-bottom: 1.5rem;">
+                <p>Miami Beach's premier boutique yacht brokerage specializing in luxury yacht sales, management, and
+                    custom builds.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="buy.html">Buy a Yacht</a></li>
+                    <li><a href="sell.html">Sell a Yacht</a></li>
+                    <li><a href="management.html">Yacht Management</a></li>
+                    <li><a href="index.html#astondoa">Astondoa Yachts</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="index.html#team">Our Team</a></li>
+                    <li><a href="index.html#news">News</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>300 Alton Road Suite 112<br>Miami Beach, FL 33139</p>
+                <p>Phone: <a href="tel:+13057638386">+1 (305) 763-8386</a></p>
+                <p>Email: <a href="mailto:info@ghostyachtsales.com">info@ghostyachtsales.com</a></p>
+            </div>
+        </div>
+        <div
+            style="max-width: 1600px; margin: 0 auto; padding: 2rem 4rem 0; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+            <p style="opacity: 0.6; font-size: 0.875rem;">&copy; 2026 Ghost Yacht Sales. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
