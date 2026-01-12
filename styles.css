@@ -973,6 +973,27 @@ video::-webkit-media-controls-overlay-enclosure {
     .management-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    /* Adjust service card backgrounds for 2-column layout */
+    .service-item {
+        background-size: 200% auto;
+    }
+
+    .service-item:nth-child(1) {
+        background-position: 0% center;
+    }
+
+    .service-item:nth-child(2) {
+        background-position: 100% center;
+    }
+
+    .service-item:nth-child(3) {
+        background-position: 0% center;
+    }
+
+    .service-item:nth-child(4) {
+        background-position: 100% center;
+    }
 }
 
 @media (max-width: 768px) {
@@ -984,6 +1005,19 @@ video::-webkit-media-controls-overlay-enclosure {
     .yachts-grid,
     .management-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* Adjust service card backgrounds for 1-column layout */
+    .service-item {
+        background-size: cover;
+        height: 600px;
+    }
+
+    .service-item:nth-child(1),
+    .service-item:nth-child(2),
+    .service-item:nth-child(3),
+    .service-item:nth-child(4) {
+        background-position: center center;
     }
 
     .astondoa-container {
