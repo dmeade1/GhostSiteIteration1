@@ -3,7 +3,7 @@
     --charcoal: #121212;
     --slate: #333333;
     --ocean: #1a1a1a;
-    --gold: #D4AF37;
+    --turquoise: #1ABC9C;
     --cream: #FAF9F6;
     --white: #FFFFFF;
     --grey: #6B7280;
@@ -26,7 +26,7 @@ body {
 /* Navigation */
 .nav {
     position: fixed;
-    top: 0;
+    top: 4px;
     left: 0;
     right: 0;
     z-index: 1001;
@@ -76,7 +76,7 @@ body {
 }
 
 .nav-menu a:hover {
-    color: var(--gold);
+    color: var(--turquoise);
 }
 
 .btn-contact {
@@ -94,7 +94,7 @@ body {
 }
 
 .btn-contact:hover {
-    background: var(--gold);
+    background: var(--turquoise);
 }
 
 /* Hero Section */
@@ -346,7 +346,7 @@ video::-webkit-media-controls-overlay-enclosure {
 }
 
 .services .section-label {
-    color: var(--gold);
+    color: var(--turquoise);
 }
 
 .services .section-title,
@@ -385,7 +385,7 @@ video::-webkit-media-controls-overlay-enclosure {
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--turquoise);
     margin-bottom: 1.5rem;
 }
 
@@ -561,7 +561,7 @@ video::-webkit-media-controls-overlay-enclosure {
 .astondoa-badge {
     display: inline-block;
     padding: 1rem 2rem;
-    background: var(--gold);
+    background: var(--turquoise);
     color: var(--white);
     font-size: 0.75rem;
     font-weight: 700;
@@ -642,7 +642,7 @@ video::-webkit-media-controls-overlay-enclosure {
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
     font-weight: 600;
-    color: var(--gold);
+    color: var(--turquoise);
     margin-bottom: 0.5rem;
 }
 
@@ -722,7 +722,7 @@ video::-webkit-media-controls-overlay-enclosure {
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--turquoise);
     margin-bottom: 0.75rem;
 }
 
@@ -781,7 +781,7 @@ video::-webkit-media-controls-overlay-enclosure {
 }
 
 .dot.active {
-    background: var(--gold) !important;
+    background: var(--turquoise) !important;
 }
 
 .testimonial-quote {
@@ -842,7 +842,7 @@ video::-webkit-media-controls-overlay-enclosure {
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 1.5rem;
-    color: var(--gold);
+    color: var(--turquoise);
 }
 
 .footer-links {
@@ -930,7 +930,7 @@ video::-webkit-media-controls-overlay-enclosure {
 .management-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 30px 80px rgba(11, 20, 38, 0.12);
-    border-color: var(--gold);
+    border-color: var(--turquoise);
 }
 
 .management-icon {
@@ -1044,7 +1044,7 @@ video::-webkit-media-controls-overlay-enclosure {
     right: 2rem;
     width: 50px;
     height: 50px;
-    background: var(--gold);
+    background: var(--turquoise);
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -1066,7 +1066,7 @@ video::-webkit-media-controls-overlay-enclosure {
 }
 
 #scroll-to-top:hover {
-    background: #c49b2d;
+    background: #16A085;
     transform: translateY(-3px);
     box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
 }
