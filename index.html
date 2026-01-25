@@ -621,10 +621,80 @@
       <p class="hero-subtitle">Located in the heart of Miami Beach, Ghost Yachts is your trusted team of yacht
         brokers and specialists. Whether you are looking to sell your existing yacht, purchase a new one, or
         build the yacht of your dreams, we are here to assist you every step of the way.</p>
-      <div class="hero-buttons">
-        <a href="#yachts" class="btn-primary">View Collection</a>
+
+      <!-- Denison-Style Search Bar -->
+      <div style="margin-top: 3rem; background: rgba(255, 255, 255, 0.95); padding: 1.5rem 2rem; max-width: 900px; margin-left: auto; margin-right: auto; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; justify-content: center;">
+          <div style="flex: 1; min-width: 150px;">
+            <label style="display: block; font-size: 0.7rem; font-weight: 600; color: var(--grey); letter-spacing: 1px; margin-bottom: 0.5rem; text-transform: uppercase;">Type</label>
+            <select style="width: 100%; padding: 0.75rem; border: 1px solid #e0e0e0; font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--midnight); background: white; cursor: pointer;">
+              <option>All Yachts</option>
+              <option>Motor Yachts</option>
+              <option>Flybridge</option>
+              <option>Sport Cruiser</option>
+              <option>Superyacht</option>
+            </select>
+          </div>
+          <div style="flex: 1; min-width: 150px;">
+            <label style="display: block; font-size: 0.7rem; font-weight: 600; color: var(--grey); letter-spacing: 1px; margin-bottom: 0.5rem; text-transform: uppercase;">Length</label>
+            <select style="width: 100%; padding: 0.75rem; border: 1px solid #e0e0e0; font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--midnight); background: white; cursor: pointer;">
+              <option>Any Length</option>
+              <option>30' - 50'</option>
+              <option>50' - 70'</option>
+              <option>70' - 100'</option>
+              <option>100'+</option>
+            </select>
+          </div>
+          <div style="flex: 1; min-width: 150px;">
+            <label style="display: block; font-size: 0.7rem; font-weight: 600; color: var(--grey); letter-spacing: 1px; margin-bottom: 0.5rem; text-transform: uppercase;">Price</label>
+            <select style="width: 100%; padding: 0.75rem; border: 1px solid #e0e0e0; font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--midnight); background: white; cursor: pointer;">
+              <option>Any Price</option>
+              <option>Under $1M</option>
+              <option>$1M - $3M</option>
+              <option>$3M - $5M</option>
+              <option>$5M+</option>
+            </select>
+          </div>
+          <div style="flex: 0 0 auto;">
+            <label style="display: block; font-size: 0.7rem; font-weight: 600; color: transparent; letter-spacing: 1px; margin-bottom: 0.5rem;">&nbsp;</label>
+            <a href="buy.html" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 2rem; background: var(--turquoise); color: white; font-weight: 600; font-size: 0.85rem; text-decoration: none; letter-spacing: 0.5px; transition: background 0.3s ease;" onmouseover="this.style.background='#16A085'" onmouseout="this.style.background='var(--turquoise)'">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+              SEARCH
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-buttons" style="margin-top: 2rem;">
+        <a href="buy.html" class="btn-primary">View All Listings</a>
         <a href="#contact" class="btn-secondary">Get in Touch</a>
       </div>
+    </div>
+  </section>
+
+  <!-- Quick Category Links - Denison Style -->
+  <section style="background: var(--white); padding: 0; position: relative; z-index: 100; margin-top: -3rem;">
+    <div style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(5, 1fr); box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+      <a href="buy.html" style="padding: 2rem 1.5rem; text-align: center; text-decoration: none; background: var(--white); border-right: 1px solid #f0f0f0; transition: all 0.3s ease;" onmouseover="this.style.background='var(--turquoise)'; this.querySelector('h4').style.color='white'; this.querySelector('p').style.color='rgba(255,255,255,0.8)'" onmouseout="this.style.background='var(--white)'; this.querySelector('h4').style.color='var(--midnight)'; this.querySelector('p').style.color='var(--grey)'">
+        <h4 style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 500; color: var(--midnight); margin-bottom: 0.5rem; transition: color 0.3s ease;">Buy a Yacht</h4>
+        <p style="font-size: 0.8rem; color: var(--grey); transition: color 0.3s ease;">Browse Listings</p>
+      </a>
+      <a href="sell.html" style="padding: 2rem 1.5rem; text-align: center; text-decoration: none; background: var(--white); border-right: 1px solid #f0f0f0; transition: all 0.3s ease;" onmouseover="this.style.background='var(--turquoise)'; this.querySelector('h4').style.color='white'; this.querySelector('p').style.color='rgba(255,255,255,0.8)'" onmouseout="this.style.background='var(--white)'; this.querySelector('h4').style.color='var(--midnight)'; this.querySelector('p').style.color='var(--grey)'">
+        <h4 style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 500; color: var(--midnight); margin-bottom: 0.5rem; transition: color 0.3s ease;">Sell Your Yacht</h4>
+        <p style="font-size: 0.8rem; color: var(--grey); transition: color 0.3s ease;">Free Valuation</p>
+      </a>
+      <a href="#astondoa-models" style="padding: 2rem 1.5rem; text-align: center; text-decoration: none; background: var(--white); border-right: 1px solid #f0f0f0; transition: all 0.3s ease;" onmouseover="this.style.background='var(--turquoise)'; this.querySelector('h4').style.color='white'; this.querySelector('p').style.color='rgba(255,255,255,0.8)'" onmouseout="this.style.background='var(--white)'; this.querySelector('h4').style.color='var(--midnight)'; this.querySelector('p').style.color='var(--grey)'">
+        <h4 style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 500; color: var(--midnight); margin-bottom: 0.5rem; transition: color 0.3s ease;">Astondoa</h4>
+        <p style="font-size: 0.8rem; color: var(--grey); transition: color 0.3s ease;">Exclusive US Partner</p>
+      </a>
+      <a href="management.html" style="padding: 2rem 1.5rem; text-align: center; text-decoration: none; background: var(--white); border-right: 1px solid #f0f0f0; transition: all 0.3s ease;" onmouseover="this.style.background='var(--turquoise)'; this.querySelector('h4').style.color='white'; this.querySelector('p').style.color='rgba(255,255,255,0.8)'" onmouseout="this.style.background='var(--white)'; this.querySelector('h4').style.color='var(--midnight)'; this.querySelector('p').style.color='var(--grey)'">
+        <h4 style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 500; color: var(--midnight); margin-bottom: 0.5rem; transition: color 0.3s ease;">Management</h4>
+        <p style="font-size: 0.8rem; color: var(--grey); transition: color 0.3s ease;">Full Service</p>
+      </a>
+      <a href="#contact" style="padding: 2rem 1.5rem; text-align: center; text-decoration: none; background: var(--white); transition: all 0.3s ease;" onmouseover="this.style.background='var(--turquoise)'; this.querySelector('h4').style.color='white'; this.querySelector('p').style.color='rgba(255,255,255,0.8)'" onmouseout="this.style.background='var(--white)'; this.querySelector('h4').style.color='var(--midnight)'; this.querySelector('p').style.color='var(--grey)'">
+        <h4 style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 500; color: var(--midnight); margin-bottom: 0.5rem; transition: color 0.3s ease;">Contact Us</h4>
+        <p style="font-size: 0.8rem; color: var(--grey); transition: color 0.3s ease;">305.763.8386</p>
+      </a>
     </div>
   </section>
 

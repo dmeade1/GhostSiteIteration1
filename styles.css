@@ -999,6 +999,13 @@ video::-webkit-media-controls-overlay-enclosure {
     }
 }
 
+/* Quick Category Bar Responsive */
+@media (max-width: 1200px) {
+    .quick-category-bar {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
 @media (max-width: 768px) {
     .hero-title {
         font-size: 3.5rem;
@@ -1035,6 +1042,49 @@ video::-webkit-media-controls-overlay-enclosure {
     .nav-menu {
         display: none;
     }
+
+    /* Hero search bar responsive */
+    .hero-content {
+        padding-top: 12rem !important;
+    }
+}
+
+/* Enhanced Yacht Card Hover Effects */
+.yacht-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.yacht-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--turquoise) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.yacht-card:hover::before {
+    opacity: 0.1;
+}
+
+/* Premium Select Styling */
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    padding-right: 2.5rem !important;
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--turquoise) !important;
 }
 
 /* Scroll to Top Button */
