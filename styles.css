@@ -26,13 +26,14 @@ body {
 /* Navigation */
 .nav {
     position: fixed;
-    top: 4px;
+    top: 0;
     left: 0;
     right: 0;
     z-index: 1001;
-    background: rgba(254, 254, 254, 0.98);
+    background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(20px);
     transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .nav-container {
@@ -204,12 +205,45 @@ video::-webkit-media-controls-overlay-enclosure {
 .hero-content {
     position: relative;
     z-index: 10;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10rem 5rem 6rem;
+    max-width: 1500px;
+    margin: 0 auto;
+    width: 100%;
+    gap: 4rem;
+}
+
+.hero-text {
+    flex: 1;
     color: var(--white);
-    max-width: 1000px;
-    padding: 2rem;
-    padding-top: 15rem;
-    padding-bottom: 4rem;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: transparent;
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,0.5);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: var(--white);
+    color: var(--midnight);
+    border-color: var(--white);
 }
 
 .hero-label {
@@ -1123,4 +1157,250 @@ select:focus {
 
 #scroll-to-top svg {
     color: var(--white);
+}
+
+/* ==========================================
+   DENISON-STYLE SEARCH CARD
+   ========================================== */
+.search-card {
+    background: var(--white);
+    max-width: 480px;
+    width: 100%;
+    padding: 2.5rem;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+    flex-shrink: 0;
+}
+
+.search-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--midnight);
+    margin-bottom: 0.5rem;
+}
+
+.search-card-subtitle {
+    font-size: 0.85rem;
+    color: var(--grey);
+    margin-bottom: 2rem;
+}
+
+.search-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.search-field {
+    position: relative;
+}
+
+.search-field.full-width {
+    grid-column: span 2;
+}
+
+.search-field label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--grey);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.search-field select,
+.search-field input {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 1px solid #e0e0e0;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: var(--midnight);
+    background: var(--white);
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.search-field select:hover,
+.search-field input:hover {
+    border-color: #999;
+}
+
+.search-field select:focus,
+.search-field input:focus {
+    outline: none;
+    border-color: var(--turquoise);
+}
+
+.search-field select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+}
+
+.search-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--turquoise);
+    color: var(--white);
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.search-btn:hover {
+    background: #16A085;
+}
+
+.search-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+}
+
+.search-links a {
+    font-size: 0.8rem;
+    color: var(--grey);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.search-links a:hover {
+    color: var(--turquoise);
+}
+
+/* ==========================================
+   BRAND CAROUSEL
+   ========================================== */
+.brand-carousel {
+    background: var(--white);
+    padding: 2rem 0;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+}
+
+.brand-carousel-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+.brand-carousel-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--grey);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.brand-logos {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.brand-logos::-webkit-scrollbar {
+    display: none;
+}
+
+.brand-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #999;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    padding: 0.5rem 0;
+}
+
+.brand-logo:hover {
+    color: var(--midnight);
+}
+
+.brand-logo.featured {
+    color: var(--turquoise);
+    font-weight: 600;
+}
+
+/* ==========================================
+   RESPONSIVE - SEARCH CARD & BRAND CAROUSEL
+   ========================================== */
+@media (max-width: 1200px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 10rem 3rem 4rem;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-cta {
+        justify-content: center;
+    }
+
+    .search-card {
+        max-width: 100%;
+    }
+
+    .brand-carousel-inner {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .brand-logos {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 8rem 1.5rem 3rem !important;
+    }
+
+    .search-card {
+        padding: 1.5rem;
+    }
+
+    .search-row {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+    }
+
+    .btn-outline {
+        width: 100%;
+        justify-content: center;
+    }
 }

@@ -537,11 +537,6 @@
 </head>
 
 <body>
-  <!-- Top Border -->
-  <div
-    style="position: fixed; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #1ABC9C 0%, #16A085 50%, #1ABC9C 100%); z-index: 1002; box-shadow: 0 2px 8px rgba(26, 188, 156, 0.3);">
-  </div>
-
   <!-- Navigation -->
   <nav class="nav">
     <div class="nav-container">
@@ -564,7 +559,7 @@
 
   <!-- Astondoa Banner -->
   <div id="astondoa-banner"
-    style="background: var(--turquoise); padding: 1.25rem; text-align: center; position: fixed; top: 6.25rem; left: 0; right: 0; z-index: 998; font-size: 1rem; font-weight: 600; letter-spacing: 1.5px; color: var(--white); box-shadow: 0 2px 10px rgba(26, 188, 156, 0.3); transition: opacity 0.3s ease, transform 0.3s ease;">
+    style="background: var(--turquoise); padding: 1rem; text-align: center; position: fixed; top: 5rem; left: 0; right: 0; z-index: 998; font-size: 0.85rem; font-weight: 600; letter-spacing: 1.5px; color: var(--white); box-shadow: 0 2px 10px rgba(26, 188, 156, 0.3); transition: opacity 0.3s ease, transform 0.3s ease;">
     THE EXCLUSIVE SOURCE FOR ASTONDOA IN AMERICA | JOIN US AT THE 2026 MIAMI BOAT SHOW
   </div>
 
@@ -616,85 +611,122 @@
       });
     </script>
     <div class="hero-content">
-      <div class="hero-label">Yacht Sales | New Builds | Yacht Management</div>
-      <h1 class="hero-title">The Art of Yachting Perfected</h1>
-      <p class="hero-subtitle">Located in the heart of Miami Beach, Ghost Yachts is your trusted team of yacht
-        brokers and specialists. Whether you are looking to sell your existing yacht, purchase a new one, or
-        build the yacht of your dreams, we are here to assist you every step of the way.</p>
+      <div class="hero-text">
+        <div class="hero-label">Yacht Sales | New Builds | Yacht Management</div>
+        <h1 class="hero-title">The Art of Yachting Perfected</h1>
+        <p class="hero-subtitle">Located in the heart of Miami Beach, Ghost Yachts is your trusted team of yacht
+          brokers and specialists. Whether you are looking to sell your existing yacht, purchase a new one, or
+          build the yacht of your dreams, we are here to assist you every step of the way.</p>
+        <div class="hero-cta">
+          <a href="buy.html" class="btn-outline">View All Yachts</a>
+          <a href="sell.html" class="btn-outline">Sell Your Yacht</a>
+        </div>
+      </div>
 
-      <!-- Denison-Style Search Bar -->
-      <div style="margin-top: 3rem; background: rgba(255, 255, 255, 0.95); padding: 1.5rem 2rem; max-width: 900px; margin-left: auto; margin-right: auto; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; justify-content: center;">
-          <div style="flex: 1; min-width: 150px;">
-            <label style="display: block; font-size: 0.7rem; font-weight: 600; color: var(--grey); letter-spacing: 1px; margin-bottom: 0.5rem; text-transform: uppercase;">Type</label>
-            <select style="width: 100%; padding: 0.75rem; border: 1px solid #e0e0e0; font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--midnight); background: white; cursor: pointer;">
-              <option>All Yachts</option>
-              <option>Motor Yachts</option>
+      <!-- Denison-Style Search Card -->
+      <div class="search-card">
+        <h3 class="search-card-title">Find Your Yacht</h3>
+        <p class="search-card-subtitle">Search our collection of luxury yachts for sale</p>
+
+        <div class="search-row">
+          <div class="search-field">
+            <label>Brand</label>
+            <select>
+              <option>All Brands</option>
+              <option>Astondoa</option>
+              <option>Azimut</option>
+              <option>Ferretti</option>
+              <option>Pershing</option>
+              <option>Princess</option>
+              <option>Sunseeker</option>
+            </select>
+          </div>
+          <div class="search-field">
+            <label>Type</label>
+            <select>
+              <option>All Types</option>
+              <option>Motor Yacht</option>
               <option>Flybridge</option>
               <option>Sport Cruiser</option>
               <option>Superyacht</option>
             </select>
           </div>
-          <div style="flex: 1; min-width: 150px;">
-            <label style="display: block; font-size: 0.7rem; font-weight: 600; color: var(--grey); letter-spacing: 1px; margin-bottom: 0.5rem; text-transform: uppercase;">Length</label>
-            <select style="width: 100%; padding: 0.75rem; border: 1px solid #e0e0e0; font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--midnight); background: white; cursor: pointer;">
-              <option>Any Length</option>
-              <option>30' - 50'</option>
-              <option>50' - 70'</option>
-              <option>70' - 100'</option>
-              <option>100'+</option>
+        </div>
+
+        <div class="search-row">
+          <div class="search-field">
+            <label>Min Length</label>
+            <select>
+              <option>No Min</option>
+              <option>30 ft</option>
+              <option>50 ft</option>
+              <option>70 ft</option>
+              <option>100 ft</option>
             </select>
           </div>
-          <div style="flex: 1; min-width: 150px;">
-            <label style="display: block; font-size: 0.7rem; font-weight: 600; color: var(--grey); letter-spacing: 1px; margin-bottom: 0.5rem; text-transform: uppercase;">Price</label>
-            <select style="width: 100%; padding: 0.75rem; border: 1px solid #e0e0e0; font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--midnight); background: white; cursor: pointer;">
-              <option>Any Price</option>
-              <option>Under $1M</option>
-              <option>$1M - $3M</option>
-              <option>$3M - $5M</option>
-              <option>$5M+</option>
+          <div class="search-field">
+            <label>Max Length</label>
+            <select>
+              <option>No Max</option>
+              <option>50 ft</option>
+              <option>70 ft</option>
+              <option>100 ft</option>
+              <option>150 ft</option>
             </select>
-          </div>
-          <div style="flex: 0 0 auto;">
-            <label style="display: block; font-size: 0.7rem; font-weight: 600; color: transparent; letter-spacing: 1px; margin-bottom: 0.5rem;">&nbsp;</label>
-            <a href="buy.html" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 2rem; background: var(--turquoise); color: white; font-weight: 600; font-size: 0.85rem; text-decoration: none; letter-spacing: 0.5px; transition: background 0.3s ease;" onmouseover="this.style.background='#16A085'" onmouseout="this.style.background='var(--turquoise)'">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
-              SEARCH
-            </a>
           </div>
         </div>
-      </div>
 
-      <div class="hero-buttons" style="margin-top: 2rem;">
-        <a href="buy.html" class="btn-primary">View All Listings</a>
-        <a href="#contact" class="btn-secondary">Get in Touch</a>
+        <div class="search-row">
+          <div class="search-field">
+            <label>Min Price</label>
+            <select>
+              <option>No Min</option>
+              <option>$500K</option>
+              <option>$1M</option>
+              <option>$2M</option>
+              <option>$5M</option>
+            </select>
+          </div>
+          <div class="search-field">
+            <label>Max Price</label>
+            <select>
+              <option>No Max</option>
+              <option>$1M</option>
+              <option>$3M</option>
+              <option>$5M</option>
+              <option>$10M+</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="search-btn" onclick="window.location.href='buy.html'">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+          Search Yachts
+        </button>
+
+        <div class="search-links">
+          <a href="buy.html">View All Listings</a>
+          <a href="buy.html#new">New Arrivals</a>
+          <a href="buy.html#reduced">Price Reductions</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Quick Category Links - Denison Style -->
-  <section style="background: var(--white); padding: 0; position: relative; z-index: 100; margin-top: -3rem;">
-    <div style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(5, 1fr); box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
-      <a href="buy.html" style="padding: 2rem 1.5rem; text-align: center; text-decoration: none; background: var(--white); border-right: 1px solid #f0f0f0; transition: all 0.3s ease;" onmouseover="this.style.background='var(--turquoise)'; this.querySelector('h4').style.color='white'; this.querySelector('p').style.color='rgba(255,255,255,0.8)'" onmouseout="this.style.background='var(--white)'; this.querySelector('h4').style.color='var(--midnight)'; this.querySelector('p').style.color='var(--grey)'">
-        <h4 style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 500; color: var(--midnight); margin-bottom: 0.5rem; transition: color 0.3s ease;">Buy a Yacht</h4>
-        <p style="font-size: 0.8rem; color: var(--grey); transition: color 0.3s ease;">Browse Listings</p>
-      </a>
-      <a href="sell.html" style="padding: 2rem 1.5rem; text-align: center; text-decoration: none; background: var(--white); border-right: 1px solid #f0f0f0; transition: all 0.3s ease;" onmouseover="this.style.background='var(--turquoise)'; this.querySelector('h4').style.color='white'; this.querySelector('p').style.color='rgba(255,255,255,0.8)'" onmouseout="this.style.background='var(--white)'; this.querySelector('h4').style.color='var(--midnight)'; this.querySelector('p').style.color='var(--grey)'">
-        <h4 style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 500; color: var(--midnight); margin-bottom: 0.5rem; transition: color 0.3s ease;">Sell Your Yacht</h4>
-        <p style="font-size: 0.8rem; color: var(--grey); transition: color 0.3s ease;">Free Valuation</p>
-      </a>
-      <a href="#astondoa-models" style="padding: 2rem 1.5rem; text-align: center; text-decoration: none; background: var(--white); border-right: 1px solid #f0f0f0; transition: all 0.3s ease;" onmouseover="this.style.background='var(--turquoise)'; this.querySelector('h4').style.color='white'; this.querySelector('p').style.color='rgba(255,255,255,0.8)'" onmouseout="this.style.background='var(--white)'; this.querySelector('h4').style.color='var(--midnight)'; this.querySelector('p').style.color='var(--grey)'">
-        <h4 style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 500; color: var(--midnight); margin-bottom: 0.5rem; transition: color 0.3s ease;">Astondoa</h4>
-        <p style="font-size: 0.8rem; color: var(--grey); transition: color 0.3s ease;">Exclusive US Partner</p>
-      </a>
-      <a href="management.html" style="padding: 2rem 1.5rem; text-align: center; text-decoration: none; background: var(--white); border-right: 1px solid #f0f0f0; transition: all 0.3s ease;" onmouseover="this.style.background='var(--turquoise)'; this.querySelector('h4').style.color='white'; this.querySelector('p').style.color='rgba(255,255,255,0.8)'" onmouseout="this.style.background='var(--white)'; this.querySelector('h4').style.color='var(--midnight)'; this.querySelector('p').style.color='var(--grey)'">
-        <h4 style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 500; color: var(--midnight); margin-bottom: 0.5rem; transition: color 0.3s ease;">Management</h4>
-        <p style="font-size: 0.8rem; color: var(--grey); transition: color 0.3s ease;">Full Service</p>
-      </a>
-      <a href="#contact" style="padding: 2rem 1.5rem; text-align: center; text-decoration: none; background: var(--white); transition: all 0.3s ease;" onmouseover="this.style.background='var(--turquoise)'; this.querySelector('h4').style.color='white'; this.querySelector('p').style.color='rgba(255,255,255,0.8)'" onmouseout="this.style.background='var(--white)'; this.querySelector('h4').style.color='var(--midnight)'; this.querySelector('p').style.color='var(--grey)'">
-        <h4 style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 500; color: var(--midnight); margin-bottom: 0.5rem; transition: color 0.3s ease;">Contact Us</h4>
-        <p style="font-size: 0.8rem; color: var(--grey); transition: color 0.3s ease;">305.763.8386</p>
-      </a>
+  <!-- Brand Carousel -->
+  <section class="brand-carousel">
+    <div class="brand-carousel-inner">
+      <span class="brand-carousel-label">Brands We Represent</span>
+      <div class="brand-logos">
+        <span class="brand-logo featured">Astondoa</span>
+        <span class="brand-logo">Azimut</span>
+        <span class="brand-logo">Benetti</span>
+        <span class="brand-logo">Ferretti</span>
+        <span class="brand-logo">Pershing</span>
+        <span class="brand-logo">Princess</span>
+        <span class="brand-logo">Riva</span>
+        <span class="brand-logo">Sunseeker</span>
+      </div>
     </div>
   </section>
 
